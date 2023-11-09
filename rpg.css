@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Spectral&family=Slackside+One&display=swap');
+body {
+    margin: 0;
+}
+.page {
+    background-color: rgb(240, 222, 175);
+    color: rgb(199, 147, 4);
+    font-size: 36;
+    font-family: sans-serif;
+    font-size: 130%;
+    text-align: center;
+
+    width: 100%;
+    min-height: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+
+    background-size: cover;
+}
+.bbcontent {
+    font-family: 'Spectral', sans-serif;
+    color: black;
+    margin: 0 25%;
+    text-align: left;
+    font-size: 1.1rem;
+}
+.bbcontent h1, .bbcontent h2, .bbcontent h3, .bbcontent h4, .bbcontent h5, .bbcontent h6 {
+    color: black;
+    background: transparent;
+    -webkit-text-fill-color: initial;
+    background-clip: initial;
+    text-align: left;
+    margin: 0;
+}
+.redacted {
+    background-color: black;
+    user-select: none;
+}
+.desol {
+    font-family: 'Slackside One', sans-serif;
+}
+p:has(+.loh){
+    margin-bottom: 0;
+}
+.loh {
+    font-family: 'Architects Daughter', 'sans-serif';
+    margin: 0;
+}
+.annotation {
+    font-family: 'Architects Daughter', 'sans-serif';
+    display: inline;
+    float: right;
+    position: relative;
+    width: 20vw;
+    margin-right: -22vw;
+    translate: 0% calc(-50% - 16px);
+}
+.tableofcontents {
+    float: left;
+    position: absolute;
+    width: 22vw;
+    text-align: left;
+    margin: 1vw;
+    font-family: 'Spectral', sans-serif;
+    font-weight: bold;
+    color: black;
+}
+.tableofcontents h1, .tableofcontents h2, .tableofcontents h3, .tableofcontents h4, .tableofcontents h5, .tableofcontents h6 {
+    font-size: 1.2rem;
+    text-align: left;
+    margin: 0;
+    color: black;
+    background: transparent;
+    -webkit-text-fill-color: initial;
+    background-clip: initial;
+    cursor: pointer;
+}
+.tableofcontents .break {
+    cursor: initial;
+}
+.tableofcontents h3 {margin-left: 20px; font-size: 1.1rem;}
+button {
+    background-color: rgb(50, 33, 158);
+    border-radius: 8px;
+    color: white;
+    padding: 14px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: black;
+    color: rgb(199, 147, 4);
+    flex-basis: content;
+}
+header div {
+    flex: 1;
+}
+header div:first-child {
+    text-align: left;
+}
+header div:nth-child(2){
+    flex-basis: content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header div:last-child {
+    text-align: right;
+    padding-right: 10px;
+}
+.contents {
+    overflow-y: overlay;
+    height: auto;
+    position: relative;
+}
+@media (orientation: portrait) {
+    header div:first-child {
+        text-align: center;
+    }
+    header div:last-child {
+        display:none;
+    }
+    .bbcontent {
+        margin: 0 5%;
+    }
+    .annotation {
+        display: block;
+        float: initial;
+        width: initial;
+        margin: 20px 0;
+        translate: none;
+    }
+    .tableofcontents {
+        display: none;
+    }
+}
+a {
+    color: rgb(199, 147, 4);
+}
+header a {
+    color: rgb(199, 147, 4);
+    transition: border 200ms, color 200ms;
+    text-decoration: none;
+    padding: 2px 10px;
+    display: inline-block;
+}
+header a:hover {
+    border-bottom: 3px solid white;
+    color: white;
+}
+header a[href='#'] {
+    border-bottom: 3px solid white;
+    color: white;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+button {
+	transition-duration: 0.4s;
+}
+button:hover {
+	background-color: rgb(168, 168, 168);
+	color: black;
+}
+footer {
+	text-align: center;
+	padding: 3px;
+	background-color: linear-gradient(rgb(129, 8, 150), rgb(184, 11, 214));
+	color: rgb(199, 147, 4);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+    margin-top: 50px;
+}
+h1 {
+    background: linear-gradient(rgb(255, 0, 0), rgb(255, 133, 133));
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+	-webkit-background-clip: text;
+}
+
+h2 {
+    background: linear-gradient(rgb(255, 0, 0), rgb(255, 133, 133));
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+	-webkit-background-clip: text;
+}
+hr {
+    border: 1px solid black;
+}
+img.title-logo {
+    max-width: 500px;
+    width: 100%;
+}
+
+*::-webkit-scrollbar {
+    display: block;
+    width: 16px;
+}
+
+*::-webkit-scrollbar-button {
+    display: none;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #333333;
+}
