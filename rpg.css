@@ -39,6 +39,7 @@ body {
 }
 .redacted {
     background-color: black;
+    color: var(--theme-color);
     user-select: none;
 }
 .desol {
