@@ -32,7 +32,7 @@ body {
     background-color: rgb(240, 222, 175);
 }
 .bbcontent h1, .bbcontent h2, .bbcontent h3, .bbcontent h4, .bbcontent h5, .bbcontent h6 {
-    color: black;
+    color: var(--theme-color);
     background: transparent;
     -webkit-text-fill-color: initial;
     background-clip: initial;
