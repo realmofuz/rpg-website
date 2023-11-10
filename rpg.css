@@ -38,8 +38,7 @@ body {
     margin: 0;
 }
 .redacted {
-    background-color: black;
-    color: var(--theme-color);
+    background-color: var(--theme-color);
     user-select: none;
 }
 .desol {
