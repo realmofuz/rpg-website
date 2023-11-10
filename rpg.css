@@ -29,6 +29,8 @@ body {
 }
 .page:has(.bbcontent){
     background-color: rgb(240, 222, 175);
+}
+.contents:has(.bbcontent){
     --theme-color: black;
 }
 .bbcontent h1, .bbcontent h2, .bbcontent h3, .bbcontent h4, .bbcontent h5, .bbcontent h6 {
