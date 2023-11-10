@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Spectral&family=Slackside+One&display=swap');
 body {
     margin: 0;
+    --theme-color: #a88b24;
 }
 .page {
-    background-color: rgb(240, 222, 175);
-    color: rgb(199, 147, 4);
+    background-color: #130505;
+    color: var(--theme-color);
     font-size: 36;
-    font-family: sans-serif;
+    font-family: 'Spectral', sans-serif;
     font-size: 130%;
     text-align: center;
 
@@ -26,6 +27,9 @@ body {
     margin: 0 25%;
     text-align: left;
     font-size: 1.1rem;
+}
+.page:has(.bbcontent){
+    background-color: rgb(240, 222, 175);
 }
 .bbcontent h1, .bbcontent h2, .bbcontent h3, .bbcontent h4, .bbcontent h5, .bbcontent h6 {
     color: black;
@@ -82,6 +86,22 @@ p:has(+.loh){
     cursor: initial;
 }
 .tableofcontents h3 {margin-left: 20px; font-size: 1.1rem;}
+
+.titlescreen {
+    background-image: url(img/cathedral.png);
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    user-select: none;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 75%;
+}
+
 button {
     background-color: rgb(50, 33, 158);
     border-radius: 8px;
@@ -102,8 +122,9 @@ header {
     justify-content: space-between;
     text-align: center;
     background-color: black;
-    color: rgb(199, 147, 4);
-    flex-basis: content;
+    color: var(--theme-color);
+    flex: 0 0 content;
+    font-family: sans-serif;
 }
 header div {
     flex: 1;
@@ -124,28 +145,8 @@ header div:last-child {
 .contents {
     overflow-y: overlay;
     height: auto;
+    flex: 1;
     position: relative;
-}
-@media (orientation: portrait) {
-    header div:first-child {
-        text-align: center;
-    }
-    header div:last-child {
-        display:none;
-    }
-    .bbcontent {
-        margin: 0 5%;
-    }
-    .annotation {
-        display: block;
-        float: initial;
-        width: initial;
-        margin: 20px 0;
-        translate: none;
-    }
-    .tableofcontents {
-        display: none;
-    }
 }
 a {
     color: rgb(199, 147, 4);
@@ -187,19 +188,44 @@ footer {
     margin-top: 50px;
 }
 h1 {
-    background: linear-gradient(rgb(255, 0, 0), rgb(255, 133, 133));
+    color: var(--theme-color);
     text-align: center;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-	-webkit-background-clip: text;
+}
+.titlescreen h1 {
+    color: var(--theme-color);
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 0px 0px 15px rgb(0, 0, 0);
+    display: inline-block;
+}
+.titlescreen p {
+    margin: 0;
+    color: var(--theme-color);
+    font-weight: bold;
+}
+.titlescreen svg {
+    vertical-align: sub;
+    filter: drop-shadow(0px 0px 15px rgb(0, 0, 0));
+    width: 100px; height: auto;
+    position: relative;
+    top: 20px;
+    display: inline;
+}
+
+.intro {
+    width: 80%;
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.description {
+    width: 80%;
+    margin: 20px auto;
 }
 
 h2 {
-    background: linear-gradient(rgb(255, 0, 0), rgb(255, 133, 133));
+    color: var(--theme-color);
     text-align: center;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-	-webkit-background-clip: text;
 }
 hr {
     border: 1px solid black;
@@ -219,7 +245,7 @@ img.title-logo {
 }
 
 *::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: #585858;
 }
 
 *::-webkit-scrollbar-track-piece {
@@ -228,4 +254,36 @@ img.title-logo {
 
 *::-webkit-scrollbar-thumb {
     background-color: #333333;
+}
+@media (orientation: portrait) {
+    header div:first-child {
+        text-align: center;
+    }
+    header div:last-child {
+        display:none;
+    }
+    .bbcontent {
+        margin: 0 5%;
+    }
+    .annotation {
+        display: block;
+        float: initial;
+        width: initial;
+        margin: 20px 0;
+        translate: none;
+    }
+    .tableofcontents {
+        display: none;
+    }
+    .titlescreen h1 {
+        font-size: 2em;
+        display: block;
+    }
+    .titlescreen svg {
+        width: 200px;
+    }
+    img {
+        width: 90%;
+        height: auto;
+    }
 }
