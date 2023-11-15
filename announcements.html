@@ -6,6 +6,20 @@
     <title>Announcements - Realm of Uz</title>
     <link rel="icon" href="./img/Realm_of_Uz.svg">
     <link href="rpg.css" rel="stylesheet">
+    <script>
+      window.onload = () => {
+        document.querySelectorAll('.date').forEach((e)=>{
+          let date = new Date(parseInt(e.textContent)*1000);
+          let day = ((new Date())-date<86400000)?'Today':
+            (((new Date())-date<172800000)?'Yesterday':
+            (((new Date())-date<604800000)?['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][date.getDay()]:
+            ((date.getMonth()+1)+'/'+(date.getDate()+1)+'/'+date.getFullYear())
+          ));
+          let time = ((date.getHours()%12==0)?'12':date.getHours()%12) + ':' + String(date.getMinutes()).padStart(2, 0) + (date.getHours()>11?' PM':' AM');
+          e.textContent = day + ' at ' + time;
+        })
+      }
+    </script>
   </head>
     <body>
       <div class="page">
@@ -16,7 +30,7 @@
           <div>
             <a href="./index.html">Home</a>
             <a href="#">Announcements</a>
-            <a href="./wiki.html">Wiki</a>
+            <a href="https://uzbrpg.fandom.com" target="_blank">Wiki</a>
             <a href="./BB.html">Backways Bar</a>
             <a href="./map.html">Map</a>
             <a href="./forums.html">Forums</a>
@@ -26,22 +40,36 @@
           </div>
         </header>
         <div class="contents">
-          <br>
           <h1>Announcements</h1>
-          <h2>10/19/2023: Backways Bar(arc 1)</h2>
-          <p>- Arc 1 of the Backways Bar Novella is now on this website!</p>
-          <p>- more coming soon</p>
-          <br>
-          <h2>10/10/2023: Xyraith Alpha</h2>
-          <p>- Xyraith has released its first public version, alpha 0.1, allowing the development of the UZBRPG to begin</p>
-          <p>- A new sneak peak has been released, this time being an actual ingame screenshot</p>
-          <br>
-          <h2>10/2/2023: New Domain</h2>
-          <p>- This website, along with the Realm of Uz guild website, now have a domain -- realmofuz.net</p>
-          <br>
-          <h2>9/21/2023: The Website</h2>
-          <p text-align="left">- This website has been created, marking the first semi-public presence of the UZBRPG</p>
-          <p text-align="left">- More stuff will be added to the various pages on this website in the coming days</p>
+          <!-- The content of span.date is an Epoch timestamp in seconds. To add an announcement, just google the current one -->
+          <div class="announcement">
+            <h2>Website Changes</h2>
+            <span class="date">1699583280</span>
+            <p>The Realm of Uz website has gotten a significant visual upgrade! See it for yourselves at</p>
+            <p><a href="/">https://rpg.realmofuz.net/</a></p>
+            <p>Please note that more changes, possibly including ingame screenshots and art, is coming soon.</p>
+          </div>
+          <div class="announcement">
+            <h2>Backways Bar (Arc 2)</h2>
+            <span class="date">1699481580</span>
+            <p><i>With all ends come beginnings anew.</i></p>
+            <p>Arc 2 of the Backways Bar is out at last and the novella has now been fully released on the Realm of Uz website!</p>
+            <p>Read it here: <a href="./BB.html">https://rpg.realmofuz.net/BB.html</a></p>
+          </div>
+          <div class="announcement">
+            <h2>Arc 2 Upcoming</h2>
+            <span class="date">1699451940</span>
+            <p><i>Two, against the end of all things.</i></p>
+            <p>Arc 2 of the Backways Bar novella is coming soon to the Realm of Uz website.</p>
+            <p><a href="./BB.html">https://rpg.realmofuz.net/BB.html</a></p>
+          </div>
+          <div class="announcement">
+            <h2>Backways Bar (Arc 1)</h2>
+            <span class="date">1697662860</span>
+            <p><i>The soldiers. The seekers. The liars. The lovers.</i></p>
+            <p>Long before the Realm of Uz, there was a bar. Join its secretive Proprietor to recount the destruction of the Greater Plane and the founding of the Realm itself in the first half of this prequel novella, releasing now on the Realm of Uz RPG website.</p>
+            <p><a href="./BB.html">https://rpg.realmofuz.net/BB.html</a></p>
+          </div>
         </div>
       </div>
   </body>
