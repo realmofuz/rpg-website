@@ -118,15 +118,17 @@ p:has(+.loh){
 
 button {
     background-color: rgb(50, 33, 158);
-    border-radius: 8px;
+    border-radius: 16px;
     color: white;
-    padding: 14px 40px;
+    /*padding: 14px 40px;*/
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    /*margin: 4px 2px;*/
     cursor: pointer;
+    width: 350px;
+    height: 500px;
 }
 header {
     width: 100%;
@@ -189,7 +191,7 @@ button {
 	transition-duration: 0.4s;
 }
 button:hover {
-	background-color: rgb(168, 168, 168);
+	background-color: var(--theme-color);
 	color: black;
 }
 footer {
