@@ -64,7 +64,7 @@ p:has(+.loh){
 .tableofcontents {
     float: left;
     position: absolute;
-    width: 22vw;
+    width: 22%;
     text-align: left;
     margin: 1vw;
     font-family: 'Spectral', sans-serif;
