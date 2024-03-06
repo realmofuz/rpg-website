@@ -116,19 +116,21 @@ p:has(+.loh){
     font-size: 0.8em;
 }
 
-button {
-    background-color: rgb(50, 33, 158);
+button.discord {
+    background-color: #5865F2;
     border-radius: 16px;
+    border: none;
     color: white;
-    /*padding: 14px 40px;*/
+    padding: 14px 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     /*margin: 4px 2px;*/
     cursor: pointer;
-    width: 350px;
-    height: 500px;
+}
+button.discord img {
+    vertical-align:bottom;
 }
 header {
     width: 100%;
@@ -191,8 +193,7 @@ button {
 	transition-duration: 0.4s;
 }
 button:hover {
-	background-color: var(--theme-color);
-	color: black;
+	scale: 110%;
 }
 footer {
 	text-align: center;
@@ -251,6 +252,24 @@ img.title-logo {
     max-width: 500px;
     width: 100%;
 }
+.map {
+    image-rendering:pixelated;
+    background-image:url("./img/stars.gif");
+    background-size: contain;
+    background-position: center;
+}
+.map img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+.map h1 {
+    color: black;
+    font-size: 2em;
+}
 
 *::-webkit-scrollbar {
     display: block;
@@ -301,6 +320,10 @@ img.title-logo {
     }
     img {
         width: 90%;
+        height: auto;
+    }
+    .map img {
+        width: 100%;
         height: auto;
     }
 }
