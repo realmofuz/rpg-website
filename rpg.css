@@ -271,6 +271,11 @@ img.title-logo {
     font-size: 2em;
 }
 
+hr {
+    border: 1px solid var(--theme-color);
+    width: 80%;
+}
+
 *::-webkit-scrollbar {
     display: block;
     width: 16px;

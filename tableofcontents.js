@@ -9,5 +9,6 @@ window.onload = () => {
             header.onclick = () => {e.scrollIntoView(true)}
         }
         document.querySelector('.tableofcontents').appendChild(header);
+        document.querySelector("#toc-container").appendChild(header);
     })
 }
