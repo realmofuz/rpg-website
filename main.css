@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+:root {
+	--theme-color: #a88b24;
+}
+@media(orientation:landscape) {
+	:root {
+		--header-height: 80px;
+	}
+}
+@media(orientation:portrait) {
+	:root {
+		--header-height: 10vh;
+	}
+	header a.homelink {
+		order: -1;
+		width: 100% !important;
+	}
+}
+body {
+	margin: 0;
+	color: #fff;
+	font-family: 'Spectral', serif;
+	background-color: #000;
+	font-size: 2vh;
+}
+header {
+	font-weight: bold;
+	position: fixed;
+	top: 0;
+	height: calc(var(--header-height) - 2px);
+	width: 100vw;
+	background-color: #000;
+	border-bottom: 2px solid var(--theme-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	z-index: 1;
+}
+header a {
+	text-align: center;
+	color: #bbb;
+	width: 10em;
+	text-decoration: none;
+	transition: color 0.25s;
+}
+header a:hover {
+	color: #fff;
+}
+header:has(a:hover) a:not(:hover) {
+	color: #bbb;
+}
+header a.activelink {
+	color: #fff;
+}
+header a.homelink {
+	width: 15em;
+}
+main {
+	background-color: #181818;
+	margin-top: var(--header-height);
+}
+footer {
+	border-top: 2px solid var(--theme-color);
+	padding: 0 2em;
+}
+a {
+	color: aqua;
+}
+hr {
+	border-color: var(--theme-color);
+}
+#splash {
+	position: relative;
+}
+#splash canvas {
+	height: calc(100vh - var(--header-height));
+	width: 100vw;
+	background-color: #000;
+}
+#splash div {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#splash h1 {
+	color: var(--theme-color);
+}
+#splash h1 img {
+	height: 2em;
+	vertical-align: text-bottom;
+}
+section.about {
+	padding: 2em 4em;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+section.about > * {
+	display: inline-block;
+	width: 500px;
+	flex-grow: 1;
+	padding: 4em;
+}
+#cathedral {
+	background-image: url(/assets/cathedral.png);
+	background-position: center;
+}
+#geopolis {
+	background-image: url(/assets/geopolis.png);
+	background-position: center;
+}
+.primary {
+	font-size: 150%;
+	text-align: center;
+	padding: 8em 4em;
+	margin: 0;
+	backdrop-filter: brightness(50%);
+}
+section.about h1 {
+	font-size: 200%;
+}
+section.about h2 {
+	font-size: 170%;
+}
+img.pixel {
+	image-rendering: pixelated;
+}
+section.about ul {
+	display: inline-block;
+	text-align: left;
+	list-style: none;
+	image-rendering: pixelated;
+	font-size: 20px;
+}
+section.about ul li::before {
+	content: '';
+	background-image: url(/assets/sigil.png);
+	width: 32px;
+	height: 32px;
+	background-size: contain;
+	vertical-align: top;
+	margin-right: 0.75em;
+	display: inline-block;
+}
+section.pagetitle {
+	text-align: center;
+	background-image: url(/assets/statue.png);
+	background-position: 100% 0%;
+	background-size: cover;
+}
+section.pagetitle div {
+	backdrop-filter: brightness(50%);
+	padding: 5em;
+}
+section.pagetitle h1 {
+	font-size: 250%;
+}
+article {
+	margin: 2em;
+	border: 2px solid var(--theme-color);
+	padding: 2em;
+	border-radius: 10px;
+}
+article time {
+	color: #999;
+	cursor: pointer;
+}
+article time::after {
+	content: '#';
+	padding: 0 0.5em;
+}
+article time:hover::after {
+	color: #ddd;
+}
+article img {
+	max-width: 100%;
+}
+article figcaption {
+	font-style: italic;
+}
+article blockquote {
+	margin: 0;
+	padding-left: 2em;
+	border-left: 2px solid var(--theme-color);
+	font-style: italic;
+}
+article hr {
+	margin: 1em 0;
+}
